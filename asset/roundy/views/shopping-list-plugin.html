@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="col-md-8 col-sm-8 col-xs-8 sLDescription">
-        <span data-ng-bind-html="item.Description | trustedHtml"></span>
+        <span data-ng-bind-html="item.Description | replaceWith:'Â':'gi':'' | trustedHtml"></span>
         <p data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</p>
         <br />
         <span data-ng-show="item.IsCoupon">expires: {{item.EndDate | date: 'M / dd / yyyy'}}</span>
