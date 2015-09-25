@@ -1,7 +1,7 @@
 ﻿<div class="hidden-meta" data-gsn-title="{{ChainName}} coupons"></div>
 <div class="row" data-ctrl-coupon-roundy="" data-ng-init="checkPrinter = false; itemsPerPage = 18">
   <div class="col-md-2 sidebar">
-    <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    <div class="getNav" data-ng-include="getThemeUrl('/views/menu.html')"></div>
     <div class="row" data-ng-include="getThemeUrl('/views/layout-sidebar-bottom.html')"></div>
   </div>
   <div class="col-md-10" data-ng-init="sortByName = 'About to Expire';">
@@ -82,7 +82,6 @@
             </button>
           </div>
         </div>
-        <div style="display: none" data-gsn-modal="getThemeUrl('/views/modal-loading.html')" data-show="selectedCoupons.items.length <= 0 && !filterBy && !selectedCoupons.isFailedLoading && !selectedCoupons.clippedCouponOnly"></div>
         <div data-ng-show="selectedCoupons.items.length == 0">No items found</div>
 
         <div class="row" data-ng-show="selectedCoupons.targeted.length > 0 && sortBy == 'EndDate'">
@@ -104,7 +103,7 @@
            Show More Coupons
           </div>
         </div>
-        <div data-ng-include="getThemeUrl('/views/coupons-digital-panel.html')" gsn-flexible-width gsn-sticky-with-anchor data-bottom="0" data-reload-on-change="selectedCoupons.items.length"></div>
+        <div data-ng-include="getThemeUrl('/views/coupons-digital-panel.html')" gsn-flexible-width="" gsn-sticky="" data-bottom="0" data-reload-on-change="selectedCoupons.items.length"></div>
       </div>
     </div>
   </div>

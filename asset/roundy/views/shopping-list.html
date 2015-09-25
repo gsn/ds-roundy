@@ -2,7 +2,7 @@
 <div class="row" data-ctrl-shopping-list="">
   <div class="row" data-gsn-shopping-list="">
     <div class="col-md-2 sidebar">
-      <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+      <div class="getNav" data-ng-include="getThemeUrl('/views/menu.html')"></div>
     </div>
     <div class="col-md-10 rightContent">
       <div class="row topPod" data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
@@ -62,13 +62,10 @@
 					  <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 2">
 					  {{item.PriceString}}
 					</span>
-					<span data-ng-bind-html="item.Description | trustedHtml"></span>
+					<span data-ng-bind-html="item.Description"></span>
 					<div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
 					<div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
 					<input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />  
-					<!-- may need this data from stored procedure
-				  <div class="savings" data-ng-show="item.SavingsString">SAVINGS - {{item.SavingsString}}</div>
-					-->
 				</div>
               </div>
 			
