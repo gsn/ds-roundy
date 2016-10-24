@@ -1,4 +1,4 @@
-﻿<div class="row" data-ctrl-registration="">
+<div class="row" data-ctrl-registration="">
   <div class="col-md-2 sidebar">
     <div class="getNav" data-ng-include="getThemeUrl('/views/menu.html')"></div>
   </div>
@@ -44,7 +44,7 @@
         </label>
         <input type="password" class="form-control passwordText" name="password" placeholder="Enter password" data-ng-minlength="6" data-ng-model="profile.Password" data-ng-required="true" /><span data-ng-show="myForm.password.$valid"><img alt="OK" class="validCheck" data-ng-src="{{getThemeUrl('/images/pReg_valid.png')}}" /></span>
         <p class="help-block" data-ng-show="myForm.password.$error.minlength">
-          * Must be at least 6 characters. 
+          * Must be at least 6 characters.
         </p>
       </div>
 
@@ -60,9 +60,12 @@
 
       <div class="checkbox">
 
-        <input type="checkbox" name="receiveemail" data-ng-model="profile.ReceiveEmail">
-        Receive Email
-                                                                                         
+                <div class="roundyaccount-email">
+                  <label for="receiveemail"><input type="checkbox" id="receiveemail" name="receiveemail" data-ng-model="profile.ReceiveEmail">
+                  Send me coupons, offers and other communications via email</label><br />
+                  <label for="receivepostalmail"><input type="checkbox" id="receivepostalmail" name="receivepostalmail" data-ng-model="profile.ReceivePostalMail">
+                  Send me coupons, offers and other communications via mail</label>
+                </div>
         <p class="help-block"><a data-ng-href="/privacy">Privacy Policy</a></p>
       </div>
 
@@ -72,7 +75,7 @@
         </label>
         <input type="text" class="form-control" name="rewardcard" data-ng-required="false" data-ng-pattern="/(^48)/" data-ng-minlength="11" placeholder="Enter rewards card number" data-ng-model="profile.ExternalId" data-ng-maxlength="11" />
         <ul data-ng-show="myForm.rewardcard.$viewValue">
-          <li data-ng-show="myForm.rewardcard.$error.pattern">Must start with a 48.   
+          <li data-ng-show="myForm.rewardcard.$error.pattern">Must start with a 48.
           </li>
           <li data-ng-show="myForm.rewardcard.$viewValue.length != 11">Must be 11 digits.
           </li>
