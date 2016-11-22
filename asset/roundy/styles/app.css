@@ -1,4 +1,4 @@
-﻿/*---------- Global CSS ----------*/
+/*---------- Global CSS ----------*/
 * {
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: html;
@@ -461,7 +461,7 @@ legend {
   color: #ffffff;
 }
 
-.dropdown-menu {    
+.dropdown-menu {
     background-color: #a5acaf;
     left: 32px;
     min-width: 214px;
@@ -1321,6 +1321,14 @@ caption {
     color: #fff;
 }
 
+.featured.merry {
+    background-image: url('//upload.gsngrocers.com/images/holiday-bg-red.jpeg') !important;
+}
+
+.featured.holiday {
+    background-image: url('//upload.gsngrocers.com/images/holiday-bg-white.jpeg') !important;
+}
+
 .featured p {
     color: #fff;
 }
@@ -1704,7 +1712,7 @@ td.nutr-border {
   .recipeMenu button {
     border-radius: 0;
     color: #FFF;
-    font-size: 16px; 
+    font-size: 16px;
     background-color: #69923a;
   }
 
