@@ -1,8 +1,10 @@
-﻿<div class="savingsInfo" ng-class="{'greyed': isOnClippedList(item), 'featured': item.IsFeatured}">
+<div class="savingsInfo" ng-class="{'greyed': isOnClippedList(item), 'featured': item.IsFeatured, 'merry': item.BrandName.indexOf('erry') > 0, 'holiday': item.BrandName.indexOf('oliday') > 0, 'freefriday': item.BrandName.indexOf('riday') > 0, 'tags-{{item.Tags}}': item.Tags }">
   <div class="hidden meta">
     <div class="product-code">{{item.ProductCode}}</div>
     <div class="product-id">{{item.Id}}</div>
     <div class="product-subcategory">{{item.SubCategory}}</div>
+    <div class="product-priority">{{item.OfferPriority}}</div>
+    <div class="product-tags">{{item.Tags}}</div>
   </div>
   <div class="row">
     <div class="imageContainer">
@@ -15,7 +17,7 @@
     </div>
   </div>
 
-  <div class="row buttons">    
+  <div class="row buttons">
       <div class="col-sm-12"  data-ng-hide="isLoggedIn">
       <button class="btn btn-default btn-xs btn-block" data-gsn-modal="getThemeUrl('/views/modal-login.html')" data-ng-click="preClipCoupon(item); showModal()"><i class="fa fa-scissors"></i>Clip Coupon</button>
         </div>
